@@ -5,7 +5,7 @@
       
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>   <script src="js/covid.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
         <script src="../js/covid.js"></script>
     
     <title>COVID19 Vaccine booking</title>
@@ -24,29 +24,30 @@
 
 
 <h2> Vaccine Booking</h2>
-<form>
+<form >
 <label>Date:</label><input type="date" name="bookDate" value="2021-05-05" min="2021-01-01" max="2022-01-01" required>
 <br>
 </br>
 <label>Time:</label> 
-<input type="time" required>
+<input type="time" name="t" required>
 <br></br>
 <label>OHIP#</label>
 <input type="number" name="ohip" required>
 <br></br>
 <label>Email</label>
-<input type="text" name="email">
+<input type="email" name="email">
 <br></br>
 <label>Phone number</label>
 <input type="number" name="phone" required>
 <br></br>
-<input type="submit">SUBMIT</input>
+<input type="button" class="form" value="SUBMIT">
 <input type="reset">CLEAR</input>
 
 
-<button>RETURN TO MAIN</button>
+<button >RETURN TO MAIN</button>
 
 
 </form>
+
 </body>
 </html>
