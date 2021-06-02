@@ -28,10 +28,13 @@ $(document).ready(()=>{
 
 
     //remove array key so as it can be pushed with a new list
-    localStorage.removeItem("array");
+    if(localStorage.getItem("array")!=null){
+        localStorage.removeItem("array");
+    }
     
-     myArray.push(localStorage);
-    localStorage.array=JSON.stringify(myArray);
+    
+     obtain.push([localStorage]);
+    localStorage.array=JSON.stringify(obtain);
     
   
 
@@ -52,11 +55,12 @@ $(document).ready(()=>{
         }else{
            // alert("here");
            myArray.push(JSON.parse(localStorage.getItem("array")));
-           var good=[];
-           for(x=0;x<myArray.length;x++){
-               good.push(myArray[x]);
+           good=[];
+          for(x=0;x<myArray[0].length;x++){
+             good.push(myArray[0][x]);
 
-           }return good;
+          }
+        return good;
 
         }
     }
@@ -84,21 +88,9 @@ $(document).ready(()=>{
 
 })
 function run(params){
-   // alert(myArray.length);
-        //  $('#lt').append("<li>#"+JSON.parse(localStorage.OHIB)+"</li>")
-     // alert((params[0][0].time));
-       // alert("here"+localStorage.length);      
-      //  $('#lt').append("<li>#"+"gg"+"</li>");
-       // document.getElementById("lt").innerHTML="llll";
-     //  alert(JSON.parse(params[0].OHIB));
-     if (params.length==1){
-
-     }
-       if (params.length!=0){
+    if (params.length!=0){
             $.each(params,(index,user)=>{//
-             //  alert(JSON.parse(user[0][0]))
-              $('#lt').append("<li>"+user.date+" "+user.time+" "+user.OHIB+" "+user.email+" "+user.phone+"</li>")
-             //  alert(JSON.parse(user.OHIB));
+             $('#lt').append("<li>"+params[index][0].date+" "+params[index][0].time+" "+params[index][0].OHIB+" "+params[index][0].email+" "+params[index][0].phone+"</li>")
 
 
 
