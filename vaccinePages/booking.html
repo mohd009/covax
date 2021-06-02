@@ -15,39 +15,43 @@
     <header> 
     </header>
 
-    <p>Please select the page to be redirected</p>
-<ul>
-    <li><a href="../index.html">Main</a></li>
-    <li><a href="booking.html">Vaccine Booking</a></li>
-    <li><a href="listing.html">Booking Listing</a></li>
-</ul>
+    
+
 
 
 <h2> Vaccine Booking</h2>
-<form >
-<label>Date:</label><input type="date" name="bookDate" value="2021-05-05" min="2021-01-01" max="2022-01-01" required>
+<form id="form1" action="">
+<label>Date:</label><input type="date" name="bookDate" value="2021-05-05" min="2021-06-08" max="2022-01-01" required>
 <br>
 </br>
 <label>Time:</label> 
-<input type="time" name="t" required>
+<input type="time" name="t" min="09:00" max="18:00" required>
 <br></br>
 <label>OHIP#</label>
-<input type="number" name="ohip" required>
+<input type="number" name="ohip" minlength="6" maxlength="7" required>
 <br></br>
 <label>Email</label>
 <input type="email" name="email">
 <br></br>
 <label>Phone number</label>
-<input type="number" name="phone" required>
+<input type="number" name="phone" minlength="10" maxlength="10" required>
 <br></br>
-<input type="button" class="form" value="SUBMIT">
-<input type="reset">CLEAR</input>
+<input id="sub"  type="submit" >
+<br></br>
+<input class="style1" type="reset"></input>
 
 
-<button >RETURN TO MAIN</button>
+
 
 
 </form>
+<a href="../index.html">
+    <button class="style1">Back to Home</button>
+  </a>
+
+<footer class="foot">
+    <h4> abdulnmo/Davis/2/June/21</h4>
+</footer>
 
 </body>
 </html>

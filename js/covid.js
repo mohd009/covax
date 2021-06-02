@@ -6,7 +6,7 @@ $(document).ready(()=>{
     $("header").html("<h1>COVID VACCINE BOOKING SYSTEM</h1> <h4> Assignment#1/ Mohamed Abdulnassir /991590042</h4>");
     //collect info from form
    // var Myarray=[];
-    $(".form").click(()=> {
+   $("form").submit(function(){
         var bookDate=($("input[name=bookDate]").val());
         localStorage.setItem("date", JSON.stringify(bookDate));
         
@@ -90,7 +90,22 @@ $(document).ready(()=>{
 function run(params){
     if (params.length!=0){
             $.each(params,(index,user)=>{//
-             $('#lt').append("<li>"+params[index][0].date+" "+params[index][0].time+" "+params[index][0].OHIB+" "+params[index][0].email+" "+params[index][0].phone+"</li>")
+              $('#table tr:last').after("<tr>"+
+              "<td>"+params[index][0].date+"</td>" +
+              "<td>"+params[index][0].time +"</td>"+
+              "<td>"+params[index][0].OHIB +"</td>"+
+              "<td>"+params[index][0].email+"</td>"+
+              "<td>"+params[index][0].phone +"</td>"+
+              
+              "</tr>")
+
+            // $('#lt').append("<td>"+params[index][0].date +"</td>");
+            // $('#lt').append("<td>"+params[index][0].time +"</td>");
+           //  $('#lt').append("<td>"+params[index][0].OHIB +"</td>");
+           //  $('#lt').append("<td>"+params[index][0].email +"</td>");
+           //  $('#lt').append("<td>"+params[index][0].phone +"</td>\n");
+         //    $('#lt').append("<tr>");
+           //  +" "+params[index][0].time+" "+params[index][0].OHIB+" "+params[index][0].email+" "+params[index][0].phone+"</li>")
 
 
 

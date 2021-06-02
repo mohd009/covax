@@ -1,11 +1,88 @@
-#foot{
-    position:fixed;
-    top:700px;
-    left:180px;
- 
- 
-    
+body{
+    background-color:pink;
+    background-image: linear-gradient(to right, violet,orange);
+   
+}
+label{
+    width:25%;
+    display:inline-block;
+    }
 
- 
+
+.grid{
+    display: grid;
+     grid-gap:10px;
+  
+     grid-template-areas: 
+        
+         'nav nav nav nav nav'
+        '                foot';
+    
+    }
+
+
+.nav{
+    margin-top: 20px;;
+    grid-area: nav;
+    display: flex;
+    text-align: center;
+    justify-content:space-evenly;
+    list-style-type: none;
+    
+    
 }
 
+header{
+    
+    text-align:center;
+    color:black;
+    text-shadow:1px 2px violet;
+    border:3px solid black;
+    
+}
+.style{
+    color:orange;
+    background-color: teal;
+    border: 2px solid red;
+    font-size: 20px;;
+}
+.style1{
+    color:orange;
+    background-color: teal;
+    border: 2px solid red;
+   
+}
+table{
+    width:50%;
+    border:2px solid purple;
+}
+th{
+    border:2px solid grey;
+
+}
+#sub{
+    color:orange;
+    background-color: teal;
+    border: 2px solid rgb(161, 154, 154);
+}
+h4{
+    color:blue;
+    text-shadow:.5px .5px red;
+}
+h2{
+    color: brown;
+    text-align: center;
+    text-shadow:.5px .5px black;
+    text-decoration: underline;
+
+}
+.foot{
+    grid-area:foot;
+    position:fixed;
+    top:600px;
+    left:180px;
+    color:rebeccapurple;
+    font-size: 17px;
+    border:2px dotted green;
+ 
+}
